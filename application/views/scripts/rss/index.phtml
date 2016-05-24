@@ -1,0 +1,14 @@
+<div style="margin:100px;">
+<?php
+	foreach ($this->Channels as $key => $value){
+		$counter = 0 ;
+		foreach ($value as $key1 => $value1){
+			$counter++;
+			if($counter > 5 ) break;
+			echo "<a href='".$value1->link()."'><h3><font color='#0b9ff3'><b>".$value1->title()."</font></b></h3></a>";
+			echo "<h6><font color='gray'>".$value1->pubDate(). "</font><h6>";
+			echo "<span style='font-size:13pt'><font color='black'>".$value1->description(). "</font></span><br/><hr>";
+		}
+	}
+?>
+</div>
